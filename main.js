@@ -3,26 +3,42 @@ const inputItim = document.querySelector("#input");
 const buttonyim = document.querySelector("#button");
 const elText = document.querySelector(".text__itm");
 
-const text = document.querySelector("p");
 daysWeek.addEventListener("submit", function (evt) {
   evt.preventDefault();
+  let value = Number(inputItim.value);
+  switch (value) {
+    case 1:
+      elText.textContent = "dushanba";
+      elText.style.color = " red";
+      break;
+    case 2:
+      elText.textContent = "seshanba";
+      elText.style.color = "aqua ";
+      break;
+    case 3:
+      elText.textContent = "chorshanba";
+      elText.style.color = "gold ";
+      break;
+    case 4:
+      elText.style.color = " yellow";
+      elText.textContent = "payshanba";
+      break;
+    case 5:
+      elText.style.color = " blue";
+      elText.textContent = "juma";
+      break;
+    case 6:
+      elText.textContent = "shanba";
+      elText.style.color = "white ";
 
-  let bag = Number(inputItim.value);
-  if (bag === 1) {
-    text.textContent = "Dushanba";
-  } else if (bag === 2) {
-    text.textContent = "seshanba";
-  } else if (bag === 3) {
-    text.textContent = "chorshanba";
-  } else if (bag === 4) {
-    text.textContent = "payshanba";
-  } else if (bag === 5) {
-    text.textContent = "juma";
-  } else if (bag === 6) {
-    text.textContent = "shanba";
-  } else if (bag === 7) {
-    text.textContent = "yakshanba;";
-  } else {
-    text.textContent = "1 dan 7 gacha bo'lgan son kiriting!";
+      break;
+    case 7:
+      elText.style.color = "brown ";
+      elText.textContent = "yakshnba";
+      break;
+    default:
+      elText.style.color = "burlywood";
+      elText.textContent = "1 dan yetigacha son kiriting";
+      break;
   }
 });
